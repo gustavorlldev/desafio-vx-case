@@ -1,0 +1,16 @@
+<h3>Excluir tarefa</h3>
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Titulo:</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="Digite o titulo" [(ngModel)]="tarefa.title" disabled>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Descrição</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="description" placeholder="Digite a descrição" rows="3" [(ngModel)]="tarefa.description" disabled></textarea>
+  </div>
+</form>
+<button type="button" class="btn btn-success mr-2" (click)="deleteTarefa()">Deletar</button>
+<button type="button" class="btn btn-danger" (click)="cancel()">Cancelar</button>
+<div class="alert alert-danger mt-2" role="alert" *ngIf="open">
+  Deletado com sucesso
+</div>
